@@ -4,7 +4,7 @@ FROM tetraweb/php:7.0
 MAINTAINER  victor apostol  "apostol.victor@gmail.com"
 
 RUN composer global require hirak/prestissimo
-RUN docker-php-ext-enable zip mcrypt
+RUN docker-php-ext-enable zip mcrypt ftp
 
 RUN apt-get install -y zip
 RUN echo 'post_max_size = 800M' >> /usr/local/etc/php/conf.d/upload.ini
